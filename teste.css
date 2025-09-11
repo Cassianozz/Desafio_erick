@@ -1,0 +1,255 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f1e8;
+    color: #4a3c28;
+}
+
+/* Navbar custom */
+.navbar {
+    background: linear-gradient(135deg, #f5f1e8 0%, #ede4d3 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #8b4513 !important;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.navbar-brand img {
+    width: 80px;       /* tamanho da logo */
+    height: auto;      /* mantém proporção */
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #4a3c28 !important;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: linear-gradient(135deg, #d2691e, #cd853f);
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #6b5b47;
+    text-align: right;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(139,69,19,0.6)), 
+                url('imagens/diferentes-tipos-de-pao-feitos-de-farinha-de-trigo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    color: #f4f4f4;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Products Grid */
+.products-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b5b47;
+    margin-bottom: 60px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, #d2691e, #cd853f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d2691e;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4a3c28;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    color: #6b5b47;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: linear-gradient(135deg, #f9f6f0, #ede4d3);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 2.8rem;
+    color: #d2691e;
+    margin-bottom: 30px;
+}
+
+.welcome-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #5d4e37;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #d2691e, #b8860b);
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(210,105,30,0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(210,105,30,0.4);
+    background: linear-gradient(135deg, #b8860b, #d2691e);
+}
+
+/* Footer */
+.footer {
+    background: #4a3c28;
+    color: #f5f1e8;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-info h3 {
+    color: #d2691e;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    .welcome-title {
+        font-size: 2.2rem;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .product-image img {
+    width: 100%;       /* ocupa toda a largura do card */
+    height: 200px;     /* mesma altura do card */
+    object-fit: cover; /* mantém proporção e corta o excesso se necessário */
+    border-radius: 10px 10px 0 0; /* borda arredondada no topo do card */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+}
